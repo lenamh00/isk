@@ -1,0 +1,333 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #eee;
+    font-family: sans-serif;
+
+
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+    margin:0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+#header{
+    position: fixed;
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px ;
+ 
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #eee;
+}
+.lo{
+    display: flex;
+}
+.lo img{
+ width:300px;
+
+
+}
+#nav-bar{
+    display: flex;
+    flex-grow: 1;
+    min-height: 80px;
+    align-items: center;
+
+}
+
+#nav-bar ul{
+    text-align: center;
+    padding: 100;
+        
+
+}
+
+#nav-bar ul li{
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 60px;
+}
+#nav-bar ul li a{
+    color: #000;
+    font-size: 16px;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+.form{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+
+}
+.form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 430px;
+    width: 100%;
+
+}
+input[type='submit']:hover{
+    background-color: orange;
+   
+}
+.card  > button {
+    border: 0;
+    margin: 15px 0;
+    background-color: #f1c40f;
+    font-weight: 400;}
+input[type="submit"] :hover{
+background-color: darkorange;
+}
+.form form input{
+    display: block;
+}
+
+input[type="email"]{
+margin-top: 20px;
+margin-bottom: 20px;
+max-width: 300px;
+background-color: #fff;
+padding: 5px;
+width: 100%;
+}
+
+input[type="submit"]{
+    margin-bottom: 20px;
+    max-width: 200px;
+    background-color: #f1c40f;
+    padding: 1px 20px ;
+    font-weight: 900;
+    border: none;
+    border-radius: 1px;
+    font-size: 16px;
+
+
+
+}
+
+#feature{
+    max-width: 100%;
+   
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.comp{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+   
+
+
+}
+.icon{
+    max-width: 100px;
+    width: 100%;
+    color:#ff8c00;
+display: none;
+}
+
+.s{
+    font-size: 25px;
+}
+.write{
+    flex-grow: 1;
+ text-align: center;
+}
+#how-it-work{
+    max-width: 100%;
+    margin: 50px auto;
+}
+
+#pricing{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+   
+    justify-content: center;
+
+}
+.card{
+    align-items: center;
+    text-align: center;
+ 
+    line-height: 30px;
+    height: 300px;
+    margin-top:0 auto;
+
+
+    margin-bottom: 15px;
+    border: 1px solid #000;
+    max-width: 340px;
+    width: 100%;
+    border-radius: 4px ;
+    text-align: center;
+}
+ .card > h2{
+     font-size: 18px;
+    background-color: #ddd;
+    color: black;
+    padding: 15px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 15px;
+
+}
+#pricing .comp strong{
+    font-size: 24px;
+}
+button{
+  
+    background-color: #f1c40f;  
+}
+ .btn{
+
+    background-color: #f1c40f;
+padding: 0 20px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 100;
+    
+background-color: #f1c40f;
+    text-transform: uppercase;
+    border:none;
+    border-radius: 2px;
+    background: transparent;
+    cursor: pointer;
+}
+
+/*border: 0;
+margin :15px 0;
+
+background-color: #f1c40f;
+padding: 8x 20px;
+border: none;
+border-radius: 2px;
+cursor: pointer;
+font-size: 24px;
+
+*/
+
+
+footer{
+
+
+    margin-top: 30px;
+    background-color: #ddd;
+    padding: 20px;
+    text-align: center;
+}
+    
+  
+
+
+.btn:hover{
+    background-color: orange;
+}
+footer p{
+
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9em;
+    color: #444;
+}
+  
+
+footer > ul{
+    padding: 0;
+}
+
+footer > ul  li{
+    display: inline;
+}
+footer > ul li:not(last-child){
+    margin-right: 10px;
+}
+footer > ul  li a{
+    color:#0000;
+    text-decoration: none;
+}
+/*******************mediaquery*************************************/
+
+@media(min-width:550px){
+.icon{
+        display: block;
+        
+    }
+    .write{
+        text-align: left;
+    }
+    .main{
+        width: 100%;
+    }
+}
+@media(min-width:600px){
+    #header{
+        flex-direction: row;
+        left: 5%;
+        right: 5%;
+
+    }
+    #nav-bar ul{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    #nav-bar ul li{
+        display: inline;
+        margin-right: 50px;
+
+    }
+
+    #nav-bar ul li :last-child{
+        margin-right: 0;
+    }
+    footer{
+        text-align: right;
+    }
+
+    .main{
+      
+        width: 100%;
+    }
+
+}
+
+
+@media(min-width:800px){
+    #pricing{
+        flex-direction: row;
+      align-self: center;  
+    }
+    #pricing .card:not(last-child){
+        margin-right: 15px;
+    }
+}
+

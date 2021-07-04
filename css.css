@@ -1,0 +1,267 @@
+/*******start variables***********/
+:root{
+    --maincolor:rgb(5, 3, 43);
+    --hover:rgb(197, 197, 228);
+    --white:white;
+}
+/*end variables*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/*section1*/
+
+.con{
+    width:100%;
+    background-color: var(--maincolor);
+    height: 70px;
+    max-width: 100%;
+
+}
+.con .onnav{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 100%;
+}
+.con .onnav .main{
+    width:700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 9px;
+    overflow-x: hidden;
+    max-width: 100%;
+    
+}
+
+
+.con .onnav .main .icon{
+    font-size: 20px;
+    border:2px solid rgb(104, 102, 102);
+    border-radius: 600px;
+    padding:6px;
+    color:white;
+    background-color: gray;
+    margin-right: 12px;
+}
+
+.con .onnav .main h3,p{
+    color:white;
+   
+    text-transform: capitalize;
+   
+
+}
+
+.con .onnav .main h3{
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+.con .onnav .main p{
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.con .onnav .main h4{
+    color:var(--maincolor);
+    background-color: white;
+    padding:10px 25px;
+    border-radius: 4px;
+    font-weight: 800;
+
+}
+/*end section1*/
+
+/****************************/
+
+
+/*responssive section 1*/
+
+@media(max-width:700px){
+.con{
+    height: 200px;
+}
+    .con .onnav {
+
+        display: flex;
+        flex-direction: column;
+      
+
+        
+        left:50%;
+        
+    }
+   .con .onnav .main {
+       margin-bottom: 20px;
+       display: flex;
+       
+       left:50%;
+   }
+ 
+}
+/***********end responsive section 1*********************/
+
+
+/******************************************* start  navig************************************************/
+
+.conn{
+    width:100%;
+    background-color: var(--white);
+    height: 90px;
+    max-width: 100%;}  
+
+    .nav > #nav-check{
+        display: none;
+    
+    }
+    .nav{
+        
+        width: 90%;
+        background-color: var(--main-color);
+        position: relative;
+        margin-top:auto;
+    max-width: 100%;
+    }
+    .nav > .nav-header
+    {
+        display: inline;
+    }
+
+    .nav > .nav-btn{
+        display: none;
+    }
+
+
+    .nav > .nav-header
+{
+    display: inline;
+}
+.nav > .nav-header > .logo {
+    display: inline-block;
+  
+    padding:10px;
+
+
+    font-size:22px;
+    font-weight: 1000;
+    text-transform: uppercase;
+    color:black;
+    letter-spacing: 0px;
+}
+.logo h1,h5{
+    margin-left: 120px;
+}
+.logo h1{
+    border-bottom: 5px solid black;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    letter-spacing: -8px;
+    
+    font-size:50px;
+    font-weight: 1200;
+    text-transform: uppercase;
+    color:black;
+}
+.logo h5{
+font-size: 10px;
+font-weight: 1000;
+color:black;
+margin-top: 0px;
+padding-top:0px;
+}
+
+    .nav > .nav-links{
+        display: inline;
+        float: right;
+       
+        font-size: 18px;
+    }
+    
+    .nav > .nav-links > a{
+        font-size: 14px;
+        margin-right: 0px;
+        margin-top: 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        display: inline-block;
+        padding:13px 15px ;
+        color:black;
+    }
+    button{
+        background-color: var(--maincolor);
+        color:rgb(231, 226, 226);
+       border-radius: 200px ;
+       padding:10px 20px;
+       text-transform: uppercase;
+       font-family: Arial, Helvetica, sans-serif;
+    }
+   
+@media(max-width:800px){
+    .nav > .nav-btn{
+        display: inline-block;
+        position:absolute;
+        right:0px;
+        top:0px;
+
+    }  
+    .nav > .nav-btn > label{
+        width: 50px;
+        height: 50px;
+        padding:13px;
+        display: inline-block;
+    }
+
+.nav > .nav-btn > label :hover,
+ nav #nav-check:checked ~ .nav-btn > label{
+     background-color:var(--hover-color);
+
+ }
+
+ .nav > .nav-btn > label > span{
+    display: block;
+    height: 10px;
+    width: 25px;
+    border-top:2px solid var(--maincolor);
+    
+    
+     }
+
+ .nav > .nav-links{
+    position:absolute;
+    display: block;
+    width: 100%;
+    background-color: var(--main-color);
+    transition: all 0.3s ease-in;
+   
+    height: 0px;
+    overflow-y: hidden;
+    top:80px;
+    left:0;
+     }
+
+ .nav > .nav-links > a{
+    display: block;
+    width: 100%;
+
+}
+
+ .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+
+}
+
+ .nav > #nav-check:checked ~ .nav-links{
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+}
+
+}
+
