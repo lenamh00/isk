@@ -1,6 +1,6 @@
 /*******start variables***********/
 :root{
-    --maincolor:rgb(5, 3, 43);
+    --maincolor:rgb(6, 5, 22);
     --hover:rgb(197, 197, 228);
     --white:white;
 }
@@ -44,7 +44,7 @@
     font-size: 20px;
     border:2px solid rgb(104, 102, 102);
     border-radius: 600px;
-    padding:6px;
+    padding:10px;
     color:white;
     background-color: gray;
     margin-right: 12px;
@@ -87,23 +87,28 @@
 .con{
     height: 200px;
 }
-    .con .onnav {
-
+    .con >.onnav {
+        margin: 0 auto;
+        padding:0 auto;
         display: flex;
         flex-direction: column;
       
 
         
-        left:50%;
+      
         
     }
-   .con .onnav .main {
+   .con >.onnav > .main {
+    margin: 0 auto;
+    padding:0 auto;
        margin-bottom: 20px;
        display: flex;
        
-       left:50%;
+      
    }
- 
+ #pri{
+     margin-left: -20px;
+ }
 }
 /***********end responsive section 1*********************/
 
@@ -245,6 +250,7 @@ padding-top:0px;
     overflow-y: hidden;
     top:80px;
     left:0;
+    z-index: 100;
      }
 
  .nav > .nav-links > a{
@@ -258,10 +264,168 @@ padding-top:0px;
 
 }
 
+
+
  .nav > #nav-check:checked ~ .nav-links{
     height: calc(100vh - 50px);
     overflow-y: auto;
+  
 }
 
+.nav > #nav-check:checked ~ .iniko{
+    opacity: 1;
 }
+.nav > #nav-check:not(:checked) ~ .iniko{
+    opacity: 0;
+
+}
+.logo > h1 {
+   
+    margin-left:2px;
+    margin-right: 0;
+}
+.logo > h5 {
+   
+    margin-left:2px;
+    margin-right: 0;
+}
+}
+
+/***********************inikio********************************/
+
+
+.iniko{
+    margin:0 auto;
+    width:100%;
+    max-width: 100%;
+    position:relative;
+    background-image: url("br.jpg");
+    height: 500px;
+   background-size: cover;
+    background-repeat: no-repeat;
+    position:relative;
+    opacity:1 ;
+}
+.container{
+    max-width: 100%;
+    
+   
+ }
+ .container > h2{
+   position:absolute;
+
+     margin-top: 40px;
+     line-height: 1.4;
+     font-weight:bold;
+     margin-bottom: 20px;
+     margin-left: 120px;
+ }
+.container > .pa{
+    position:absolute;
+    margin-top: 120px;
+    line-height: 1.4;
+    color:rgb(48, 3, 3);
+    margin-bottom: 20px;
+    margin-left: 120px;
+}
+ 
+ .mais{
+    position:absolute;
+    margin-top: 230px;
+    margin-left: 120px;
+    border-radius: 9px;  
+    border:none;
+
+ }
+ /********responsive iniko***************/
+ @media(max-width:700px){
+    .container > h2,.pa{
+        
+     margin-left: 30%;
+
+    }  
+    .mais{
+        margin-left: 40%;
+    }
+}
+/************end responsive iniko***********************/
+/****************sobre*******************/
+.sorbo{
+    margin:0 auto;
+    width:80%;
+    max-width: 100%;
+}
+    
+
+.content{
+max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+.box{
+    border:1px solid ;
+   width: ((100%-24px) /3);
+    height: 300px;
+    background-color: var(--maincolor);
+    margin-right: 16px;
+   position: relative;
+   top:-50px;
+
+
+}
+.box > .icon{
+    font-size: 18px;
+    color:var(--white);
+    background-color: var(--maincolor);
+    border-top:2px  solid white;
+
+border-right:4px  solid white;
+border-bottom:2px  solid white;
+    padding:10px;
+    border-radius: 2000px;
+    position:absolute;
+  top:-20px;
+    margin-bottom: 30px;
+    margin-left: 150px;
+   text-shadow: 20px white;
+
+    
+}
+.box > h1{
+    margin-top: 30px;
+    color:var(--white);
+    text-align: center;
+    margin-bottom: 30px;
+    
+}
+.box > p{
+    color:var(--white);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/****************************end sorbo***************************************/
+/*************** start sorbo responsive **********************/
+
+@media(max-width:700px){
+    .content{
+        display: flex;
+        flex-direction: column;
+        
+
+    }
+    .box{
+        margin-top:10px;
+        margin-bottom: 20px;
+    }
+    .box >.icon{
+margin-left:45%;
+    }
+}
+/*************** start sorbo responsive **********************/
+
 
